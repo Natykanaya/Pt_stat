@@ -19,8 +19,8 @@ def fcbook():
 def inst():
     r = requests.get("https://www.instagram.com/progresstech.ua/?hl=ru")
     soup = bs(r.text, "html.parser")
+    print(soup)
     podpis = soup.find('meta',property="og:description")
-    print(podpis)
     podp=podpis["content"]
     podpp=podp.split()
     ret = podpp[0]
