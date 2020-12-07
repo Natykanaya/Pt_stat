@@ -32,7 +32,6 @@ def inst():
 
 def vk():
     print("try")
-
     r=requests.get("https://vk.com/progresstech_ukraine")
     soup = bs(r.text, "html.parser")
     print (soup)
