@@ -37,4 +37,4 @@ def vk():
     soup = bs(r.text, "html.parser")
     print (soup)
 
-#print(inst())
+print(vk())
