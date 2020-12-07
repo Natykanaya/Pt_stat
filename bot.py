@@ -15,7 +15,8 @@ def start_handler(message):
 
 @bot.message_handler(content_types= 'text' )
 def process_step(message):
-    mess = '\nНа ' + now.strftime("%d-%m-%Y %H:%M") + '\nInstagram: ' + inst() + '\nFacebook: ' + fcbook()
+    # + '\nInstagram: ' + inst()
+    mess = '\nНа ' + now.strftime("%d-%m-%Y %H:%M") + '\nFacebook: ' + fcbook()
     if message.text=='📊 Статистика':
         msg = bot.reply_to(message, mess)
 

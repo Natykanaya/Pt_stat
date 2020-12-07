@@ -17,12 +17,13 @@ def fcbook():
     return subscribers
 
 def inst():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
-    }
-    r = requests.get("https://www.instagram.com/progresstech.ua/?hl=ru", headers=headers)
+    # headers = {
+    #     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
+    # }
+    session = requests.Session()
+    r = session.get("https://www.instagram.com/progresstech.ua/?hl=ru")#, headers=headers)
     soup = bs(r.text, "html.parser")
-    print(soup)
+    #print(soup)
     podpis = soup.find('meta',property="og:description")
     podp=podpis["content"]
     podpp=podp.split()
@@ -36,4 +37,4 @@ def vk():
     soup = bs(r.text, "html.parser")
     print (soup)
 
-print(inst())
+#print(inst())
