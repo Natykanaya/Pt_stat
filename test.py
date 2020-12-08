@@ -36,7 +36,7 @@ def vk():
     r=requests.get("https://vk.com/progresstech_ukraine")
     soup = bs(r.text, "html.parser")
     f = open('vk.html', 'w')
-    f.write(soup)
+    f.write(str(soup))
     print("writing")
 
     # print(soup)
