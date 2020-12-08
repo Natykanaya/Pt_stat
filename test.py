@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup as bs
 import requests
 from urllib import request
-import urllib
+#urllib.request
+import urllib.request
 
 def fcbook():
     r = requests.get("https://www.facebook.com/ProgresstechUA/")
