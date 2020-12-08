@@ -39,7 +39,8 @@ def vk():
     # f.write(soup.encode('utf-8'))
     # print("writing")
     # return f
-    print(soup)
+    #print(soup)
+
 
     tag=soup.find_all('span',_class='header_label fl_l')
     for i in tag:
