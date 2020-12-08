@@ -24,5 +24,5 @@ def process_step(message):
         vk_file='vk.html'
         print('posle func')
 
-        bot.send_document(message, vk_file)
+        bot.send_document(message.chat.id, vk_file)
 bot.polling()
