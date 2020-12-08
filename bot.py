@@ -20,6 +20,9 @@ def process_step(message):
     if message.text=='📊 Статистика':
         #msg = bot.reply_to(message, mess)
         vk()
+        print('do func')
         vk_file='vk.html'
+        print('posle func')
+
         bot.send_document(message, vk_file)
 bot.polling()
