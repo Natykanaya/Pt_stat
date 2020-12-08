@@ -31,11 +31,10 @@ def inst():
     return ret
 
 def vk():
-    print("try")
     r=requests.get("https://vk.com/progresstech_ukraine")
     soup = bs(r.text, "html.parser")
-
-    myUrl = 'https://vk.com/progresstech_ukraine'
+    print(soup)
+    #myUrl = 'https://vk.com/progresstech_ukraine'
 
     # Скачиваешь сначала страницу
     # url = 'http://yandex.ru'
@@ -44,12 +43,11 @@ def vk():
     # f = open('index.html', 'w')
     # f.write(html)
 
-
-    otvet = request.urlopen(myUrl)
-    mytext1 = otvet.readlines()
-    filetxt = open('textt.txt', 'wb')
-    for line in mytext1:
-        filetxt.write(line)
-    filetxt.close()
+    # otvet = request.urlopen(myUrl)
+    # mytext1 = otvet.readlines()
+    # filetxt = open('textt.txt', 'wb')
+    # for line in mytext1:
+    #     filetxt.write(line)
+    # filetxt.close()
 
 vk()
