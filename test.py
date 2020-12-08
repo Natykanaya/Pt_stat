@@ -41,8 +41,8 @@ def vk():
     # return f
     #print(soup)
 
-
-    tag=soup.find_all('span',_class='header_label fl_l')
+    print("come here")
+    tag=soup.find('span',_class='header_label fl_l')
     for i in tag:
         print(i)
 
