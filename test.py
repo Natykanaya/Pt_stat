@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as bs
 import requests
 from urllib import request
+import urllib
 
 def fcbook():
     r = requests.get("https://www.facebook.com/ProgresstechUA/")
@@ -31,23 +32,17 @@ def inst():
     return ret
 
 def vk():
-    r=requests.get("https://vk.com/progresstech_ukraine")
-    soup = bs(r.text, "html.parser")
-    print(soup)
-    #myUrl = 'https://vk.com/progresstech_ukraine'
+    # r=requests.get("https://vk.com/progresstech_ukraine")
+    # soup = bs(r.text, "html.parser")
+    # print(soup)
 
     # Скачиваешь сначала страницу
-    # url = 'http://yandex.ru'
-    # html = urllib.urlopen(url).read()
-    # # Теперь записываешь файл
-    # f = open('index.html', 'w')
-    # f.write(html)
+    url = 'https://vk.com/progresstech_ukraine'
 
-    # otvet = request.urlopen(myUrl)
-    # mytext1 = otvet.readlines()
-    # filetxt = open('textt.txt', 'wb')
-    # for line in mytext1:
-    #     filetxt.write(line)
-    # filetxt.close()
+    html = urllib.urlopen(url).read()
+    # Теперь записываешь файл
+    f = open('vk.html', 'w')
+    f.write(html)
+
 
 vk()
