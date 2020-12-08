@@ -43,8 +43,7 @@ def vk():
 
     print("come here")
     tag=soup.find('span',_class='header_label fl_l')
-    for i in tag:
-        print(i)
+    print(tag)
 
     # Скачиваешь сначала страницу
     #url = 'https://vk.com/progresstech_ukraine'
