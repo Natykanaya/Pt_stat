@@ -42,7 +42,8 @@ def vk():
     html = urllib.urlopen(url).read()
     # Теперь записываешь файл
     f = open('vk.html', 'w')
-    f.write(html)
 
+    f.write(html)
+    print("writing")
 
 vk()
