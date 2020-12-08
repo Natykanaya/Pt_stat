@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
+from urllib import request
 
 def fcbook():
     r = requests.get("https://www.facebook.com/ProgresstechUA/")
@@ -14,6 +15,17 @@ def fcbook():
             num_list.append(word)
     #убираем скобки списка и выводим цифру
     subscribers=''.join(num_list)
+
+
+    myUrl = 'https://www.facebook.com/ProgresstechUA/'
+    otvet = request.urlopen(myUrl)
+    mytext1 = otvet.readlines()
+    filetxt = open('textt.txt', 'wb')
+    for line in mytext1:
+        filetxt.write(line)
+    filetxt.close()
+
+
     return subscribers
 
 def inst():
@@ -34,6 +46,16 @@ def vk():
     print("try")
     r=requests.get("https://vk.com/progresstech_ukraine")
     soup = bs(r.text, "html.parser")
-    print (soup)
 
-print(vk())
+    myUrl = 'https://vk.com/progresstech_ukraine'
+    otvet = request.urlopen(myUrl)
+    mytext1 = otvet.readlines()
+    filetxt = open('textt.txt', 'wb')
+    for line in mytext1:
+        filetxt.write(line)
+    filetxt.close()
+
+
+    #print (soup)
+
+print(fcbook())
