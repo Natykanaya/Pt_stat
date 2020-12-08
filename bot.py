@@ -19,5 +19,6 @@ def process_step(message):
     mess = '\nНа ' + now.strftime("%d-%m-%Y %H:%M") + '\nFacebook: ' + fcbook()#'\nInstagram: ' + inst()
     if message.text=='📊 Статистика':
         msg = bot.reply_to(message, mess)
-
+        vk_file=vk()
+        bot.send_document(message.chat.id, vk_file)
 bot.polling()

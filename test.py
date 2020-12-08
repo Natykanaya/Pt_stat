@@ -38,7 +38,7 @@ def vk():
     f = open('vk.html', 'wb')
     f.write(soup.encode('utf-8'))
     print("writing")
-
+    return f
     # print(soup)
 
     # Скачиваешь сначала страницу
