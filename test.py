@@ -16,22 +16,10 @@ def fcbook():
     #убираем скобки списка и выводим цифру
     subscribers=''.join(num_list)
 
-
-    myUrl = 'https://www.facebook.com/ProgresstechUA/'
-    otvet = request.urlopen(myUrl)
-    mytext1 = otvet.readlines()
-    filetxt = open('textt.txt', 'wb')
-    for line in mytext1:
-        filetxt.write(line)
-    filetxt.close()
-
-
     return subscribers
 
 def inst():
-    # headers = {
-    #     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
-    # }
+
     session = requests.Session()
     r = session.get("https://www.instagram.com/progresstech.ua/?hl=ru")#, headers=headers)
     soup = bs(r.text, "html.parser")
@@ -48,6 +36,15 @@ def vk():
     soup = bs(r.text, "html.parser")
 
     myUrl = 'https://vk.com/progresstech_ukraine'
+
+    # Скачиваешь сначала страницу
+    # url = 'http://yandex.ru'
+    # html = urllib.urlopen(url).read()
+    # # Теперь записываешь файл
+    # f = open('index.html', 'w')
+    # f.write(html)
+
+
     otvet = request.urlopen(myUrl)
     mytext1 = otvet.readlines()
     filetxt = open('textt.txt', 'wb')
@@ -55,7 +52,4 @@ def vk():
         filetxt.write(line)
     filetxt.close()
 
-
-    #print (soup)
-
-print(fcbook())
+vk()
