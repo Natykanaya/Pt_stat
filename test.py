@@ -33,18 +33,22 @@ def inst():
     return ret
 
 def vk():
-    # r=requests.get("https://vk.com/progresstech_ukraine")
-    # soup = bs(r.text, "html.parser")
+    r=requests.get("https://vk.com/progresstech_ukraine")
+    soup = bs(r.text, "html.parser")
+    f = open('vk.html', 'w')
+    f.write(soup)
+    print("writing")
+
     # print(soup)
 
     # Скачиваешь сначала страницу
-    url = 'https://vk.com/progresstech_ukraine'
+    #url = 'https://vk.com/progresstech_ukraine'
 
-    html = urllib.urlopen(url).read()
+    #html = urllib.urlopen(url).read()
     # Теперь записываешь файл
-    f = open('vk.html', 'w')
-
-    f.write(html)
-    print("writing")
+    # f = open('vk.html', 'w')
+    #
+    # f.write(html)
+    # print("writing")
 
 vk()
